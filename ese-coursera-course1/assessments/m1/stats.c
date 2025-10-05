@@ -33,33 +33,60 @@
 #define SIZE 40 //size of array
 
 void print_array(unsigned char *test, int size) {
- // loop through array items and printf each one
+  printf("Starting Array: ");
+  for (char i=0; i < size; i++) {
+    printf("%d ", test[i]);
+  }
 }
 
 int find_mean(unsigned char *test, int size) {
-  // find sum of all items and divivde by array length
+  int total = 0;
+  for (int i=0; i < size; i++) {
+    total = total + test[i];
+  }
+
+  return total/size;
+
 }
 
 int find_max(unsigned char *test, int size) {
-  // return first item in reverse-sorted array
+  return test[0];
 }
 
 int find_min(unsigned char *test, int size, int max) {
-  // return last item in reverse-sorted array
+  return test[size-1];
 }
 
 void sort_array(unsigned char *test, int size) {
-  // Implement sorting algo
-  // Call this function before calculating other parameters
+  for (int i = 0; i < size - 1; i++) {
+    for (int j = 0; j < size - i - 1; j++) {
+      if (test[j] < test[j + 1]) { //sort GREATEST to least
+        // Swap
+        int temp = test[j];
+        test[j] = test[j + 1];
+        test[j + 1] = temp;
+      }
+    }
+  }
 }
 
 int find_median(unsigned char *test, int size) {
-  // if array has even items, then average the two center items
-  // if array has odd items, return middle item.
+  if (size % 2 != 0) {
+    return test[size/2];
+  } else {
+    return (test[size/2-1] + test[size/2]) /2;
+  };
 }
 
 void print_statistics(int max, int min, int median, int mean) {
-  // print each parameter
+  printf("\nMean: ");
+  printf("%d ", mean);
+  printf("| Max: ");
+  printf("%d ", max);
+  printf("| Min: ");
+  printf("%d ", min);
+  printf("| Median: ");
+  printf("%d \n", median);
 }
 
 
