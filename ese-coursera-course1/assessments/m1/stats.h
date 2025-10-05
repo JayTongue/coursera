@@ -9,13 +9,9 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
- *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @file stats.h 
+ * @author Justin Tung
+ * @date 2025-10-04
  *
  */
 #ifndef __STATS_H__
@@ -24,16 +20,19 @@
 /* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Assignment submission for Module 1
  *
- * <Add Extended Description Here>
+ * This function takes an array of unsigned char 
+ * (hard coded size and array at the moment)
+ * and returns basic statistics of max, min, mean, and median.
+ * This is achieved through BubbleSort.
+ * functions for max and min were implemented 
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * 
+ * @param test: ann array of unsighed char of size SIZE (TODO)
+ * @param SIZE: the size of the test arrray (TODO)
  *
- * @return <Add Return Informaiton here>
+ * @return char max, char min, char mean, char medians
  */
 
 
